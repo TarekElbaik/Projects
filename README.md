@@ -76,6 +76,11 @@ A powerful and educational suite of network sniffers built with **Python**, **Sc
 - Python 3.6+
 - Pip
 - Admin/root privileges
+- **Npcap** (for Windows) – Required for packet capture
+
+> Download Npcap from [https://npcap.com](https://npcap.com) and during installation:
+> ✅ Check _“Install Npcap in WinPcap API-compatible Mode”_
+
 
 ### 2. Installation
 
