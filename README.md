@@ -1,16 +1,19 @@
 # 🐍 Python Network Sniffer
 
-A powerful and educational command-line network packet sniffer built with **Python** and **Scapy**. This tool captures and analyzes network traffic, presenting it in a clear, color-coded, and easy-to-understand format.
+A powerful and educational suite of network sniffers built with **Python**, **Scapy**, and **PySide6**. This project includes both **command-line** and **graphical** sniffers to capture and analyze network traffic in real time with color-coded, user-friendly, and technically rich output.
 
 ---
 
 ## ✨ Key Features
 
-- 🖥️ **Dual Scripts**: Choose between a user-friendly version for beginners or an advanced, technical sniffer for power users.
-- 🎨 **Color-Coded Output**: Easily distinguish between source IPs, destinations, and protocols at a glance.
-- 📚 **Educational Focus**: The friendly version translates technical jargon (like port numbers and TCP flags) into plain English for easier learning.
-- 🔧 **Deep Analysis**: The advanced version provides detailed, layer-by-layer packet breakdowns, perfect for technical analysis.
-- 💻 **Cross-Platform**: Works on Windows, macOS, and Linux with the same commands.
+- 🖥️ **Multiple Modes**: Choose between:
+  - `sniffer_friendly.py` – Beginner-friendly CLI version
+  - `sniffer_advanced.py` – Deep-dive CLI for technical users
+  - `gui_sniffer.py` – Modern desktop GUI sniffer
+- 🎨 **Color-Coded CLI Output**: Quickly understand protocols, IPs, and ports.
+- 🧠 **Educational Insight**: Clear translation of ports, protocols, and TCP flags.
+- 🕵️ **Deep Packet Inspection**: Advanced breakdown of headers, payloads, and metadata.
+- 💻 **Cross-Platform**: Works on Windows, macOS, and Linux.
 
 ---
 
@@ -53,17 +56,28 @@ A powerful and educational command-line network packet sniffer built with **Pyth
 -----------------------------
 ```
 
+### `gui_sniffer.py` – GUI Sniffer with Dark Theme
+
+> 🌌 A sleek, responsive desktop GUI sniffer with hex view, protocol color-coding, and interactive tree display.
+
+**Key Features:**
+- 📊 Real-time packet capture in a styled table
+- 🧩 Interactive field-by-field inspection via expandable tree
+- 🧵 Clean hex + ASCII dump for low-level analysis
+- 🌙 Fully themed dark mode interface with modern UI/UX
+- 🖱️ Toolbar controls: start, stop, clear
+
 ---
 
 ## 🛠️ Getting Started
 
-Follow these steps to get the sniffer running on your local machine.
-
 ### 1. Prerequisites
 
 - Python 3.6+
+- Pip
+- Admin/root privileges
 
-### 2. Installation Steps
+### 2. Installation
 
 #### A. Clone the Repository
 
@@ -72,44 +86,34 @@ git clone https://github.com/YourUsername/YourRepoName.git
 cd YourRepoName
 ```
 
-#### B. Create a `requirements.txt` File
+#### B. Create `requirements.txt`
 
-Create a new file named `requirements.txt` in the project directory and add:
-
-```
+```txt
 scapy
 colorama
+pyside6
 ```
 
-#### C. Install Required Libraries
+#### C. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-#### D. Special Requirement for Windows Users
+#### D. Windows-Specific
 
-Scapy on Windows needs a packet capture driver called **Npcap**.
-
-- Download it from https://npcap.com/
-- During installation, **select**:  
-  ✅ _Install Npcap in WinPcap API-compatible Mode_
+- Download and install [Npcap](https://npcap.com/)
+- ✅ Enable _"Install Npcap in WinPcap API-compatible Mode"_
 
 ---
 
 ## ▶️ How to Run
 
-> ⚠️ **Admin/root privileges are required**
+> ⚠️ Must be run with **admin/root privileges**
 
-### On **Windows**:
+### CLI Sniffers
 
-Right-click your terminal (Command Prompt or PowerShell) and select **"Run as administrator"**.
-
-### On **macOS/Linux**:
-
-Use `sudo` before each command.
-
-#### Run the Friendly Version:
+#### Friendly Version:
 
 ```bash
 # Windows
@@ -119,7 +123,7 @@ python sniffer_friendly.py
 sudo python3 sniffer_friendly.py
 ```
 
-#### Run the Advanced Version:
+#### Advanced Version:
 
 ```bash
 # Windows
@@ -129,14 +133,45 @@ python sniffer_advanced.py
 sudo python3 sniffer_advanced.py
 ```
 
-> Press `Ctrl+C` to stop the sniffer at any time.
+### GUI Sniffer
+
+```bash
+# Windows
+python gui_sniffer.py
+
+# macOS/Linux
+sudo python3 gui_sniffer.py
+```
+
+> Use `Ctrl+C` to stop CLI sniffers. GUI has start/stop buttons.
+
+---
+
+## 📂 Project Structure
+
+```
+📁 network-sniffer/
+├── sniffer_friendly.py     # Beginner CLI sniffer
+├── sniffer_advanced.py     # Advanced CLI analyzer
+├── gui_sniffer.py          # GUI-based desktop sniffer
+├── requirements.txt        # Python dependencies
+└── README.md               # This file
+```
 
 ---
 
 ## ⚖️ Ethical Disclaimer
 
-This tool is intended for **educational purposes only**, and should only be used on networks and devices that you **own** or have **explicit permission** to monitor.
+This project is provided for **educational purposes only**. Do **not** use it on networks you do not own or have explicit permission to monitor.
 
-❗ Unauthorized network sniffing is a **violation of privacy** and may be **illegal** in many jurisdictions.
+- 🚫 Unauthorized sniffing may be **illegal**
+- 📜 Use responsibly and ethically
 
-The developer assumes **no liability** and is **not responsible** for any misuse or damage caused by this program.
+The developer assumes **no liability** for misuse.
+
+---
+
+## 🧠 Author & Credits
+
+Made with 💻 by TARAK – Contributions welcome!
+
